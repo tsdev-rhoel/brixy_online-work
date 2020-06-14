@@ -1,0 +1,121 @@
+<ion-content mode="ios" padding style="--ion-background-color: transparent; overflow-y: scroll;--overflow-y: scroll; color: #ffffff; text-align: center;">
+    <img src="assets/icon/brixylogo.png" style="width: 25%;">
+    <ion-list mode="ios">
+      <br>
+      <ion-label mode="ios" style="color: #eeeeee;">Register to Brixy Live to recieve gifts and more!</ion-label><br>
+      <ion-item style="color: #ffffff;">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6">
+              <ion-label position="floating" style="color: #cecece;">First Name</ion-label>
+              <ion-input type="text" mode="ios" [(ngModel)]="inpt_fname" maxlength="50" minlength="2" value="{{ fname }}"></ion-input>
+            </ion-col>
+            <ion-col  size="6">
+              <ion-label position="floating" style="color: #cecece;">Last Name</ion-label>
+              <ion-input type="text" mode="ios" [(ngModel)]="inpt_lname" maxlength="50" minlength="2"></ion-input>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-icon mode="ios" name="person" slot="start" style="color: #ffffff;"></ion-icon>
+      </ion-item>
+      <ion-item style="color: #ffffff;">
+        <ion-label position="floating" style="color: #cecece;">Nickname</ion-label>
+        <ion-input type="text" mode="ios" [(ngModel)]="inpt_nickname" maxlength="50" minlength="2"></ion-input>
+        <ion-icon mode="ios" name="person" slot="start" style="color: #ffffff;"></ion-icon>
+      </ion-item>
+      <ion-item style="color: #ffffff;">
+        <ion-label position="floating" style="color: #cecece;">Age</ion-label>
+        <ion-input type="number" [(ngModel)]="inpt_age" maxlength="3" minlength="1"></ion-input>
+        <ion-icon mode="ios" name="person-add" slot="start" style="color: #ffffff;"></ion-icon>
+      </ion-item>
+      <ion-item style="color: #ffffff;">
+        <ion-label position="floating" style="color: #cecece;">Gender</ion-label>
+        <ion-select interface="popover" mode="ios" [(ngModel)]="inpt_gender">
+          <ion-select-option value="Male">Male</ion-select-option>
+          <ion-select-option value="Female">Female</ion-select-option>
+          <ion-select-option value="Unspecified">Unspecified</ion-select-option>
+        </ion-select>
+        <ion-icon mode="ios" name="man" slot="start" style="color: #ffffff;"></ion-icon>
+      </ion-item>
+      <ion-item style="color: #ffffff;">        
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6">
+              <ion-label position="floating" style="color: #cecece;">Town/City</ion-label>
+              <ion-input type="text" mode="ios" [(ngModel)]="inpt_city" maxlength="50" minlength="2"></ion-input>
+            </ion-col>
+            <ion-col  size="6">
+              <ion-label position="floating" style="color: #cecece;">Country</ion-label>
+              <ion-input type="text" mode="ios" [(ngModel)]="inpt_country" maxlength="50" minlength="2"></ion-input>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-icon mode="ios" name="pin" slot="start" style="color: #ffffff;"></ion-icon>
+      </ion-item>
+      <ion-item style="color: #ffffff;">
+        <ion-label position="floating" style="color: #cecece;">Email</ion-label>
+        <ion-input type="email" [(ngModel)]="inpt_email" value="{{ email }}" maxlength="50" minlength="7"></ion-input>
+        <ion-icon mode="ios" name="mail" slot="start" style="color: #ffffff;"></ion-icon>
+      </ion-item>
+      <ion-item style="color: #ffffff;">
+        <ion-label position="floating" style="color: #cecece;">Contact Number</ion-label>
+        <ion-input type="text" [(ngModel)]="inpt_mobile_num" value="{{ mobile_num }}" maxlength="12" minlength="11"></ion-input>
+        <ion-icon mode="ios" name="call" slot="start" style="color: #ffffff;"></ion-icon>
+      </ion-item>
+        <br><br>
+      
+      <ion-item style="color: #ffffff;">        
+        <ion-grid>
+          <ion-row>
+            <ion-col size="4">
+              <ion-button expand="block" fill="clear" mode="ios" (click)="cancel()">CANCEL</ion-button>
+            </ion-col>
+            <ion-col  size="8">
+              <ion-button expand="block" mode="ios" (click)="register()" color="secondary">REGISTER</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+
+    </ion-list>
+</ion-content>
+
+<!-- <ion-segment style="padding: 5px" color="primary" mode="ios" (ionChange)="segmentChanged()" [(ngModel)]="segment">
+  <ion-segment-button layout="icon-start" style="padding: 3px" mode="ios" value="0">
+      <ion-label>ACCOUNT</ion-label>
+      <ion-icon name="key" mode="ios"></ion-icon>
+  </ion-segment-button>
+  <ion-segment-button layout="icon-start" mode="ios" value="1" style="padding: 3px">
+      <ion-label>REGISTER</ion-label>
+      <ion-icon name="person-add" mode="ios"></ion-icon>
+  </ion-segment-button>
+</ion-segment>
+
+<ion-content mode="ios" padding>
+  <ion-row style="padding-bottom: 5px;">
+    <ion-label>To continue using Brixy Live, please fill-up the form below.</ion-label>        
+  </ion-row>
+
+<ion-slides #slides (ionSlideDidChange)="slideChanged()" mode="ios">
+  <ion-slide>
+      <ion-grid>
+     
+      <ion-row  mode="ios" text-center style="background: #1dc1e6;border-radius: 30px;width: 100%;">
+              <ion-col style="color: white" >
+                  <ion-label>ACCOUNT&nbsp;&nbsp;</ion-label>
+              </ion-col>
+      </ion-row>
+      
+      </ion-grid>
+  </ion-slide>
+  <ion-slide>
+      <ion-grid>
+      <ion-row  mode="ios" text-center style="background: #1dc1e6;border-radius: 30px;width: 100%;">
+              <ion-col style="color: white" >
+                  <ion-label>REGISTER&nbsp;&nbsp;</ion-label>
+              </ion-col>
+      </ion-row>
+      </ion-grid>
+  </ion-slide>
+</ion-slides>
+</ion-content> -->

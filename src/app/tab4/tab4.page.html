@@ -1,0 +1,321 @@
+<ion-header translucent mode="ios">
+    <ion-toolbar mode="ios">
+        <ion-buttons slot="secondary" (click)="goBack()">
+            <ion-button>
+              <ion-icon slot="icon-only" name="arrow-back" mode="ios"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+
+        <ion-title>Brixy Store</ion-title>
+
+        <ion-buttons slot="primary" (click)="toAccount()">
+          <ion-button>
+              <img src="assets/icon/profilee.png" style="width: 32px;" (click)="toAccount()" mode="ios">
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+        <ion-segment style="padding: 5px" color="primary" mode="ios" (ionChange)="segmentChanged()" [(ngModel)]="segment">
+        <ion-segment-button layout="icon-start" style="padding: 3px" mode="ios" value="0">
+            <ion-label>All</ion-label>
+            <ion-icon name="list" mode="ios"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button layout="icon-start" mode="ios" value="1" style="padding: 3px">
+            <ion-label>Purchase Gifts</ion-label>
+            <ion-icon name="gift" mode="ios"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button layout="icon-start" mode="ios" value="2">
+            <ion-label>Purchase Gold</ion-label>
+            <ion-icon name="trophy" mode="ios"></ion-icon>
+        </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content mode="ios" padding>
+        <ion-row style="padding-bottom: 5px;">
+                <ion-col style="color: black" mode="ios" text-left>
+                    <ion-label><b>GOLD:</b>&nbsp;&nbsp;</ion-label>
+                    <ion-icon name="apps" color="warning" mode="ios"></ion-icon>
+                    <ion-text>10,000</ion-text>
+                </ion-col>
+                <ion-col style="color: black" mode="ios" text-right>
+                    <ion-label><b>COINS:</b>&nbsp;&nbsp;</ion-label>
+                    <ion-icon name="logo-bitcoin" color="warning" mode="ios"></ion-icon>
+                    <ion-text>100,000</ion-text>
+                </ion-col>
+            </ion-row>
+        <!-- <ion-row style="padding-bottom: 5px;">
+           <ion-col text-center>
+                <ion-button mode="ios" size="small"  color="light" (click)="goWallet()">
+                    <ion-icon name="wallet" mode="ios"></ion-icon>
+                    <ion-label>&nbsp;Go to My Wallet</ion-label>
+                </ion-button>
+           </ion-col>
+       </ion-row> -->
+    <ion-slides #slides (ionSlideDidChange)="slideChanged()" mode="ios">
+        <ion-slide>
+            <ion-grid>
+           
+            <ion-row  mode="ios" text-center style="background: #1dc1e6;border-radius: 30px;width: 100%;">
+                    <ion-col style="color: white" >
+                        <ion-label>PURCHASE GIFTS&nbsp;&nbsp;</ion-label>
+                    </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-list mode="ios">
+                        <ion-item (click)="bronze()">
+                            <ion-label style="font-size: 12px">Bronze (Popular Gifts)</ion-label>
+                            <ion-note slot="end" color="danger">10</ion-note>
+                        </ion-item>
+                        <ion-item (click)="silver()">
+                            <ion-label style="font-size: 12px">Silver (Hot Gifts)</ion-label>
+                            <ion-note slot="end" color="danger">10</ion-note>
+                        </ion-item>
+                        <ion-item (click)="gold()">
+                            <ion-label style="font-size: 12px">Gold (Exclusive Gifts)</ion-label>
+                            <ion-note slot="end" color="danger">15</ion-note>
+                        </ion-item>
+                        <ion-item (click)="popular()">
+                            <ion-label style="font-size: 12px">Popular Pinoy Gifts</ion-label>
+                            <ion-note slot="end" color="danger" >10</ion-note>
+                        </ion-item>
+                     </ion-list>
+                </ion-col>
+            </ion-row>
+            <ion-row   mode="ios" text-center style="background: #1dc1e6;border-radius: 30px;width: 100%;">
+                    <ion-col style="color: white" >
+                        <ion-label>PURCHASE GOLD&nbsp;&nbsp;</ion-label>
+                    </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-list  mode="ios">
+                        <ion-item>
+                            <ion-label style="font-size: 12px">
+                                <ion-icon name="logo-bitcoin" style="zoom: 1.2" color="warning"></ion-icon>100</ion-label>
+                            <ion-note slot="end" color="danger" no-padding style="padding-top: 5px;">
+                                <ion-button  mode="ios" size="small" color="success" fill="outline" style="font-size:11px">
+                                        PHP 15</ion-button>
+                            </ion-note>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label style="font-size: 12px">
+                                    <ion-icon name="logo-bitcoin" style="zoom: 1.2" color="warning"></ion-icon>500</ion-label>
+                            <ion-note slot="end" color="danger" no-padding style="padding-top: 5px;">
+                                <ion-button  mode="ios" size="small" color="success" fill="outline" style="font-size:11px">
+                                        PHP 50</ion-button>
+                            </ion-note>
+                        </ion-item>
+                         <ion-item>
+                            <ion-label style="font-size: 12px">
+                                    <ion-icon name="logo-bitcoin" style="zoom: 1.2" color="warning"></ion-icon>1000</ion-label>
+                            <ion-note slot="end" color="danger" no-padding style="padding-top: 5px;">
+                                <ion-button  mode="ios" size="small" color="success" fill="outline" style="font-size:11px">
+                                        PHP 100</ion-button>
+                            </ion-note>
+                        </ion-item>
+                         <ion-item>
+                            <ion-label style="font-size: 12px">
+                                    <ion-icon name="logo-bitcoin" style="zoom: 1.2" color="warning"></ion-icon>1500</ion-label>
+                            <ion-note slot="end" color="danger" no-padding style="padding-top: 5px;">
+                                <ion-button  mode="ios" size="small" color="success" fill="outline" style="font-size:11px">
+                                        PHP 150</ion-button>
+                            </ion-note>
+                        </ion-item>
+                         <ion-item>
+                            <ion-label style="font-size: 12px">
+                                    <ion-icon name="logo-bitcoin" style="zoom: 1.2" color="warning"></ion-icon>2100</ion-label>
+                            <ion-note slot="end" color="danger" no-padding style="padding-top: 5px;">
+                                <ion-button  mode="ios" size="small" color="success" fill="outline" style="font-size:11px">
+                                        PHP 200</ion-button>
+                            </ion-note>
+                        </ion-item>
+                         <ion-item>
+                            <ion-label style="font-size: 12px">
+                                    <ion-icon name="logo-bitcoin" style="zoom: 1.2" color="warning"></ion-icon>2700</ion-label>
+                            <ion-note slot="end" color="danger" no-padding style="padding-top: 5px;">
+                                <ion-button  mode="ios" size="small" color="success" fill="outline" style="font-size:11px">
+                                        PHP 250</ion-button>
+                            </ion-note>
+                        </ion-item>
+                         <ion-item>
+                            <ion-label style="font-size: 12px">
+                                    <ion-icon name="logo-bitcoin" style="zoom: 1.2" color="warning"></ion-icon>5500</ion-label>
+                            <ion-note slot="end" color="danger" no-padding style="padding-top: 5px;">
+                                <ion-button  mode="ios" size="small" color="success" fill="outline" style="font-size:11px">
+                                        PHP 500</ion-button>
+                            </ion-note>
+                        </ion-item>
+                         <ion-item>
+                            <ion-label style="font-size: 12px">
+                                    <ion-icon name="logo-bitcoin" style="zoom: 1.2" color="warning"></ion-icon>11000</ion-label>
+                            <ion-note slot="end" color="danger" no-padding style="padding-top: 5px;">
+                                <ion-button  mode="ios" size="small" color="success" fill="outline" style="font-size:11px">
+                                        PHP 1000</ion-button>
+                            </ion-note>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label style="font-size: 12px">
+                                    <ion-icon name="logo-bitcoin" style="zoom: 1.2" color="warning"></ion-icon>28000</ion-label>
+                            <ion-note slot="end" color="danger" no-padding style="padding-top: 5px;">
+                                <ion-button  mode="ios" size="small" color="success" fill="outline" style="font-size:11px">
+                                        PHP 2500</ion-button>
+                            </ion-note>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label style="font-size: 12px">
+                                    <ion-icon name="logo-bitcoin" style="zoom: 1.2" color="warning"></ion-icon>56500</ion-label>
+                            <ion-note slot="end" color="danger" no-padding style="padding-top: 5px;">
+                                <ion-button  mode="ios" size="small" color="success" fill="outline" style="font-size:11px">
+                                        PHP 5000</ion-button>
+                            </ion-note>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label style="font-size: 12px">
+                                    <ion-icon name="logo-bitcoin" style="zoom: 1.2" color="warning"></ion-icon>114000</ion-label>
+                            <ion-note slot="end" color="danger" no-padding style="padding-top: 5px;">
+                                <ion-button  mode="ios" size="small" color="success" fill="outline" style="font-size:11px">
+                                        PHP 10000</ion-button>
+                            </ion-note>
+                        </ion-item>
+                     </ion-list>
+                </ion-col>
+            </ion-row>
+            </ion-grid>
+        </ion-slide>
+        <ion-slide>
+            <ion-grid>
+            <ion-row  mode="ios" text-center style="background: #1dc1e6;border-radius: 30px;width: 100%;">
+                    <ion-col style="color: white" >
+                        <ion-label>GIFTS&nbsp;&nbsp;</ion-label>
+                    </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-list  mode="ios">
+                        <ion-item (click)="bronze()">
+                            <ion-label style="font-size: 12px">Bronze (Popular Gifts)</ion-label>
+                            <ion-note slot="end" color="danger">99</ion-note>
+                        </ion-item>
+                        <ion-item (click)="silver()">
+                            <ion-label style="font-size: 12px">Silver (Hot Gifts)</ion-label>
+                            <ion-note slot="end" color="danger">99</ion-note>
+                        </ion-item>
+                        <ion-item (click)="gold()">
+                            <ion-label style="font-size: 12px">Gold (Exclusive Gifts)</ion-label>
+                            <ion-note slot="end" color="danger">99</ion-note>
+                        </ion-item>
+                        <ion-item (click)="popular()">
+                            <ion-label style="font-size: 12px">Popular Pinoy Gifts</ion-label>
+                            <ion-note slot="end" color="danger" >99</ion-note>
+                        </ion-item>
+                     </ion-list>
+                </ion-col>
+            </ion-row>
+            </ion-grid>
+        </ion-slide>
+        <ion-slide>
+            <ion-grid>
+                <ion-row  mode="ios" text-center style="background: #1dc1e6;border-radius: 30px;width: 100%;">
+                    <ion-col style="color: white" >
+                        <ion-label>PURCHASE GOLD&nbsp;&nbsp;</ion-label>
+                    </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-list  mode="ios">
+                        <ion-item>
+                            <ion-label style="font-size: 12px">
+                                <ion-icon name="logo-bitcoin" style="zoom: 1.2" color="warning"></ion-icon>100</ion-label>
+                            <ion-note slot="end" color="danger" no-padding style="padding-top: 5px;">
+                                <ion-button  mode="ios" size="small" color="success" fill="outline" style="font-size:11px">
+                                        PHP 15</ion-button>
+                            </ion-note>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label style="font-size: 12px">
+                                    <ion-icon name="logo-bitcoin" style="zoom: 1.2" color="warning"></ion-icon>500</ion-label>
+                            <ion-note slot="end" color="danger" no-padding style="padding-top: 5px;">
+                                <ion-button  mode="ios" size="small" color="success" fill="outline" style="font-size:11px">
+                                        PHP 50</ion-button>
+                            </ion-note>
+                        </ion-item>
+                         <ion-item>
+                            <ion-label style="font-size: 12px">
+                                    <ion-icon name="logo-bitcoin" style="zoom: 1.2" color="warning"></ion-icon>1000</ion-label>
+                            <ion-note slot="end" color="danger" no-padding style="padding-top: 5px;">
+                                <ion-button  mode="ios" size="small" color="success" fill="outline" style="font-size:11px">
+                                        PHP 100</ion-button>
+                            </ion-note>
+                        </ion-item>
+                         <ion-item>
+                            <ion-label style="font-size: 12px">
+                                    <ion-icon name="logo-bitcoin" style="zoom: 1.2" color="warning"></ion-icon>1500</ion-label>
+                            <ion-note slot="end" color="danger" no-padding style="padding-top: 5px;">
+                                <ion-button  mode="ios" size="small" color="success" fill="outline" style="font-size:11px">
+                                        PHP 150</ion-button>
+                            </ion-note>
+                        </ion-item>
+                         <ion-item>
+                            <ion-label style="font-size: 12px">
+                                    <ion-icon name="logo-bitcoin" style="zoom: 1.2" color="warning"></ion-icon>2100</ion-label>
+                            <ion-note slot="end" color="danger" no-padding style="padding-top: 5px;">
+                                <ion-button  mode="ios" size="small" color="success" fill="outline" style="font-size:11px">
+                                        PHP 200</ion-button>
+                            </ion-note>
+                        </ion-item>
+                         <ion-item>
+                            <ion-label style="font-size: 12px">
+                                    <ion-icon name="logo-bitcoin" style="zoom: 1.2" color="warning"></ion-icon>2700</ion-label>
+                            <ion-note slot="end" color="danger" no-padding style="padding-top: 5px;">
+                                <ion-button  mode="ios" size="small" color="success" fill="outline" style="font-size:11px">
+                                        PHP 250</ion-button>
+                            </ion-note>
+                        </ion-item>
+                         <ion-item>
+                            <ion-label style="font-size: 12px">
+                                    <ion-icon name="logo-bitcoin" style="zoom: 1.2" color="warning"></ion-icon>5500</ion-label>
+                            <ion-note slot="end" color="danger" no-padding style="padding-top: 5px;">
+                                <ion-button  mode="ios" size="small" color="success" fill="outline" style="font-size:11px">
+                                        PHP 500</ion-button>
+                            </ion-note>
+                        </ion-item>
+                         <ion-item>
+                            <ion-label style="font-size: 12px">
+                                    <ion-icon name="logo-bitcoin" style="zoom: 1.2" color="warning"></ion-icon>11000</ion-label>
+                            <ion-note slot="end" color="danger" no-padding style="padding-top: 5px;">
+                                <ion-button  mode="ios" size="small" color="success" fill="outline" style="font-size:11px">
+                                        PHP 1000</ion-button>
+                            </ion-note>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label style="font-size: 12px">
+                                    <ion-icon name="logo-bitcoin" style="zoom: 1.2" color="warning"></ion-icon>28000</ion-label>
+                            <ion-note slot="end" color="danger" no-padding style="padding-top: 5px;">
+                                <ion-button  mode="ios" size="small" color="success" fill="outline" style="font-size:11px">
+                                        PHP 2500</ion-button>
+                            </ion-note>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label style="font-size: 12px">
+                                    <ion-icon name="logo-bitcoin" style="zoom: 1.2" color="warning"></ion-icon>56500</ion-label>
+                            <ion-note slot="end" color="danger" no-padding style="padding-top: 5px;">
+                                <ion-button  mode="ios" size="small" color="success" fill="outline" style="font-size:11px">
+                                        PHP 5000</ion-button>
+                            </ion-note>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label style="font-size: 12px">
+                                    <ion-icon name="logo-bitcoin" style="zoom: 1.2" color="warning"></ion-icon>114000</ion-label>
+                            <ion-note slot="end" color="danger" no-padding style="padding-top: 5px;">
+                                <ion-button  mode="ios" size="small" color="success" fill="outline" style="font-size:11px">
+                                        PHP 10000</ion-button>
+                            </ion-note>
+                        </ion-item>
+                     </ion-list>
+                </ion-col>
+            </ion-row>
+            </ion-grid>
+        </ion-slide>
+    </ion-slides>
+</ion-content>

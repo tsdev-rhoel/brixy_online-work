@@ -1,0 +1,54 @@
+<ion-header translucent mode="ios">
+  <ion-toolbar mode="ios">
+      <ion-buttons slot="secondary" (click)="goBack()">
+        <ion-button>
+            <ion-icon name="arrow-back"  mode="ios"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>
+        <img src="assets/icon/imggolive2.gif" style="width: 80px;padding-top: 6px;" mode="ios">
+      </ion-title>
+      <ion-buttons slot="primary">
+        <ion-button>
+            <img src="assets/icon/brixylogo.png" style="width: 32px;" mode="ios">
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content mode="ios" padding>
+  <ion-text mode="ios" text-center>
+      <h2 mode="ios">Ready to broadcast your moment?</h2>
+  </ion-text>
+  <ion-grid padding style="padding-bottom: 25px!important">
+    <ion-row>
+      <ion-col text-center>
+        <img src="assets/icon/imgmakeup.png" mode="ios" style="padding:10px;width: 90%">
+        <ion-label>Makeup</ion-label>  
+      </ion-col>
+      <ion-col  text-center>
+        <img src="assets/icon/imgcontent.png" mode="ios" style="padding:10px;width: 90%">
+         <ion-label>Content</ion-label>
+      </ion-col>
+    </ion-row> <br>
+     <ion-row>
+      <ion-col text-center>
+        <img src="assets/icon/imgbackground.png" mode="ios" style="padding:10px;width: 90%">
+        <ion-label>Background</ion-label>  
+      </ion-col>
+      <ion-col  text-center>
+        <img src="assets/icon/imglighting.png" mode="ios" style="padding:10px;width: 90%">
+         <ion-label>Lighting</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid> 
+  <ion-row>
+    <ion-col text-center>
+        <ion-button style="width: 100%;" mode="ios" shape="round" color="primary" (click)="goLive()">GO LIVE!</ion-button>
+    </ion-col>
+    <ion-col text-center>
+        <ion-button style="width: 100%;" mode="ios" shape="round" color="light" (click)="goBack()">Cancel</ion-button>
+    </ion-col> 
+  </ion-row>
+  
+</ion-content>

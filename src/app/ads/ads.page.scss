@@ -1,0 +1,22 @@
+.justify{
+    text-align: justify;
+}
+.img-responsive{
+    width: 100%;
+    height: auto;
+}
+.img-loading{
+    width: 50%;
+    height: auto;
+}
+.btn-default{
+    --background: #1dc1e6;
+}
+.my-overlay {
+    position: fixed;
+    width: 12%;
+    text-shadow: 3px 3px 5px black;
+    z-index: 20;
+    top: 2%;
+    right: 3%;
+  }

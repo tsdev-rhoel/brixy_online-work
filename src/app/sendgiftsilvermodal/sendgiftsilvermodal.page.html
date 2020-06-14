@@ -1,0 +1,29 @@
+<ion-header mode="ios">
+  <ion-toolbar mode="ios" no-padding>
+      <ion-item slot="start" style="font-size: 11px;" lines="none">
+          <ion-label mode="ios"><b>GEMS:</b>&nbsp;&nbsp;</ion-label>
+          <ion-icon name="star" color="warning" mode="ios"></ion-icon>
+          <ion-text mode="ios">10</ion-text>
+      </ion-item>
+      <ion-item slot="end" style="font-size: 11px;" lines="none">
+          <ion-label mode="ios"><b>COINS:</b>&nbsp;&nbsp;</ion-label>
+          <ion-icon name="logo-bitcoin" color="warning" mode="ios"></ion-icon>
+          <ion-text mode="ios">100</ion-text>
+      </ion-item>
+  </ion-toolbar>
+</ion-header>
+<ion-content mode="ios" text-center style="padding-bottom: 0;">
+  <p style="font-size: 13px;" mode="ios" no-padding><b>{{silver.name}}</b></p>
+ <ion-img [src]="silver.imagegif" style="width: 80%;margin: 0 auto" mode="ios"></ion-img>
+ <p mode="ios" style="line-height: 0;"> <ion-icon name="logo-bitcoin" color="warning" mode="ios"></ion-icon> {{silver.price}}</p> 
+</ion-content>
+<ion-footer mode="ios">
+    <ion-toolbar mode="ios" style="padding-left: 10px;padding-right: 10px">
+        <ion-button slot="start" mode="ios" color="danger" size="small" (click)="closeModal()">
+          Cancel
+        </ion-button>
+         <ion-button slot="end" mode="ios" color="secondary" size="small">
+          Send gift
+        </ion-button>
+      </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,87 @@
+<ion-content mode="ios" style="--ion-background-color: transparent;--overflow: hidden;">
+  <div class="my-overlay-right">
+    <ion-icon mode="ios" name="close" style="zoom:2.2;color: white;" (click)="goBack()"></ion-icon>
+  </div>
+  <div class="my-overlay-left">
+      <ion-row>
+          <ion-col text-left>
+              <ion-row>
+                  <ion-col text-center>
+                      <ion-icon mode="ios" name="warning" style="zoom:1.4;" color="warning"></ion-icon>
+                  </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col text-center no-padding>
+                          <ion-note mode="ios" color="light" style="font-size: 12px;">Report</ion-note>
+                  </ion-col>
+              </ion-row>
+          </ion-col>
+          <ion-col text-right>
+              <ion-row>
+                <ion-col text-center>
+                    <ion-icon mode="ios" name="heart-dislike" style="zoom:1.4;" color="warning"></ion-icon>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col text-center no-padding>
+                          <ion-note mode="ios" color="light" style="font-size: 12px;">Block</ion-note>
+                  </ion-col>
+              </ion-row>
+          </ion-col>
+      </ion-row>
+    
+  </div>
+  <ion-card mode="ios" style="color: white;" text-center>
+    <br><br>
+    <ion-card-header mode="ios" no-padding>
+      <img src="assets/icon/imgmakeup.png" class="profile-pic"> 
+      <ion-card-title no-padding style="color: white;">Sheila Berdin<br>
+        <ion-label style="font-size: 13px;">User ID: 000001</ion-label> <br>
+        <ion-label style="font-size: 13px;">Caloocan City, Philippines</ion-label> 
+          <ion-grid no-padding>
+            <ion-row>
+                <ion-col>
+                    <ion-label style="font-size: 15px;">Level</ion-label>
+                </ion-col>
+                <ion-col>
+                    <ion-label style="font-size: 15px;">Gold</ion-label>
+                </ion-col>
+                <ion-col>
+                    <ion-label style="font-size: 15px;">Coins</ion-label>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col>
+                      <!-- <ion-icon name="star" mode="ios" color="warning"></ion-icon>  -->
+                      <img src="assets/icon/medal.png" style="width: 30px !important; height: 30px; margin: auto;">
+                      <ion-label style="font-size: 15px;">14</ion-label>
+                  </ion-col>
+                  <ion-col>
+                      <!-- <ion-icon name="medal"  mode="ios" color="warning"></ion-icon> -->
+                      <img src="assets/icon/gold.png" style="width: 30px !important; height: 30px; margin: auto;">
+                      <ion-label style="font-size: 15px;">4, 301</ion-label>
+                  </ion-col>
+                  <ion-col>
+                      <!-- <ion-icon name="logo-bitcoin"  mode="ios" color="warning"></ion-icon> -->
+                      <img src="assets/icon/cost.png" style="width: 30px !important; height: 30px; margin: auto;">
+                      <ion-label style="font-size: 15px;">4</ion-label>
+                  </ion-col>
+                </ion-row>
+              <ion-row style="text-align: center;padding: 0%;">
+                <ion-col>
+                  <div>
+                      <ion-button mode="ios" shape="round" color="light" style="font-size: 12px;">Followers: 30</ion-button>
+                  </div>
+                </ion-col>
+                <ion-col>
+                    <div>
+                        <ion-button mode="ios" shape="round" color="light" style="font-size: 12px;">Following: 30</ion-button>
+                    </div>
+                  </ion-col>
+              </ion-row>
+            </ion-grid>
+      </ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  
+</ion-content>

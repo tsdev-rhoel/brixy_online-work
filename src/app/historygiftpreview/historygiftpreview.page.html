@@ -1,0 +1,47 @@
+<ion-header mode="ios">
+    <ion-toolbar mode="ios" no-padding>
+        <ion-item slot="start" style="font-size: 11px;" lines="none">
+            <ion-label mode="ios"><b>GEMS:</b>&nbsp;&nbsp;</ion-label>
+            <ion-icon name="star" color="warning" mode="ios"></ion-icon>
+            <ion-text mode="ios">10</ion-text>
+        </ion-item>
+        <ion-item slot="end" style="font-size: 11px;" lines="none">
+            <ion-label mode="ios"><b>COINS:</b>&nbsp;&nbsp;</ion-label>
+            <ion-icon name="logo-bitcoin" color="warning" mode="ios"></ion-icon>
+            <ion-text mode="ios">100</ion-text>
+        </ion-item>
+    </ion-toolbar>
+  </ion-header>
+<ion-content mode="ios" text-center style="padding-bottom: 0;">
+    <p style="font-size: 13px;" mode="ios" no-padding><b>{{gift.dateandtime}}</b></p>
+   <ion-img [src]="gift.image" style="width: 60%;margin: 0 auto" mode="ios"></ion-img>
+   <p mode="ios" style="line-height: 0;">{{gift.text}}</p> 
+   
+  </ion-content>
+  <ion-footer>
+      <ion-row style="padding-bottom: 8px;" padding>
+          <ion-col text-left>
+              <ion-row>
+                  <ion-col text-left no-padding><ion-label style="font-size:11px"><b>Remaining Cashout</b></ion-label></ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col text-left no-padding>
+                          <ion-icon name="logo-bitcoin" color="warning" mode="ios"></ion-icon>
+                          <ion-note style="font-size:16px" color="dark">10,000</ion-note>
+                  </ion-col>
+              </ion-row>
+          </ion-col>
+          <ion-col text-right>
+              <ion-row>
+                  <ion-col text-right no-padding><ion-label style="font-size:11px"><b>Total Cashout</b></ion-label></ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col text-right no-padding>
+                          <ion-icon name="logo-bitcoin" color="warning" mode="ios"></ion-icon>
+                          <ion-note style="font-size:16px" color="dark">50,000</ion-note>
+                  </ion-col>
+              </ion-row>
+          </ion-col>
+      </ion-row>
+  </ion-footer>
+  

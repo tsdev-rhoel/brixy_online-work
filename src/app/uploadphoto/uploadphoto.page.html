@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Upload Profile Picture</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button expand="block" (click)="getImage()">Choose Profile Picture</ion-button>
+  <!-- <ion-button *ngIf="image" style="margin: auto;" (click)="cropImage()">Crop</ion-button> -->
+  <img *ngIf="image" [src]="image" />
+  <ion-button expand="block" *ngIf="image" (click)="uploadphoto()">Upload Profile Picture</ion-button>
+</ion-content>

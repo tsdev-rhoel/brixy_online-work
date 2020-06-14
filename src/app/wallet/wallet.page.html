@@ -1,0 +1,173 @@
+<ion-header translucent mode="ios">
+  <ion-toolbar mode="ios">
+    <ion-buttons slot="secondary" (click)="goBack()">
+      <ion-button>
+          <ion-icon name="arrow-back"  mode="ios"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+      <ion-title>My Wallet</ion-title>
+
+      <ion-buttons slot="primary">
+          <ion-button>
+              <img src="assets/icon/brixylogo.png" style="width: 32px;" mode="ios">
+          </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+    <ion-segment style="padding: 5px" color="secondary" mode="ios" (ionChange)="segmentChanged()" [(ngModel)]="segment">
+        <!-- <ion-segment-button layout="icon-start" style="padding: 3px" mode="ios" value="0">
+            <ion-label>All</ion-label>
+            <ion-icon name="keypad" mode="ios"></ion-icon>
+        </ion-segment-button>   -->
+        <ion-segment-button layout="icon-start" style="padding: 3px" mode="ios" value="0">
+            <ion-label>Transactions</ion-label>
+            <ion-icon name="list" mode="ios"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button layout="icon-start" mode="ios" value="1">
+            <ion-label>Gifts</ion-label>
+            <ion-icon name="gift" mode="ios"></ion-icon>
+        </ion-segment-button>
+    </ion-segment>
+    
+</ion-header>
+
+<ion-content mode="ios" padding>
+    <ion-grid>
+        <ion-row>
+            <ion-col text-center>
+                <ion-button mode="ios" size="default" no-margin color="light">
+                    <ion-icon name="settings" mode="ios"></ion-icon>
+                    <ion-label>&nbsp;Payment Settings</ion-label>
+                </ion-button>
+            </ion-col>
+            <ion-col text-center>
+                <ion-button mode="ios" size="default" no-margin color="light" (click)="goStore()">
+                    <ion-icon name="cart" mode="ios"></ion-icon>
+                    <ion-label>&nbsp;Go to Brixy Store</ion-label>
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+     <ion-row>
+             <ion-col style="color: black" mode="ios" text-left>
+                 <ion-label><b>GOLD:</b>&nbsp;&nbsp;</ion-label>
+                 <ion-icon name="apps" color="warning" mode="ios"></ion-icon>
+                 <ion-text>100,000</ion-text>
+             </ion-col>
+             <ion-col style="color: black" mode="ios" text-right>
+                 <ion-label><b>COINS:</b>&nbsp;&nbsp;</ion-label>
+                 <ion-icon name="logo-bitcoin" color="warning" mode="ios"></ion-icon>
+                 <ion-text>10,000</ion-text>
+             </ion-col>
+         </ion-row>
+          <ion-row style="padding-bottom: 8px;">
+             <ion-col text-left>
+                 <ion-row>
+                     <ion-col text-left no-padding><ion-label style="font-size:14px"><b>Remaining Cashout</b></ion-label></ion-col>
+                 </ion-row>
+                 <ion-row>
+                     <ion-col text-left no-padding>
+                             <ion-icon name="logo-bitcoin" color="warning" mode="ios"></ion-icon>
+                             <ion-note style="font-size:16px" color="dark">10,000</ion-note>
+                     </ion-col>
+                 </ion-row>
+             </ion-col>
+             <ion-col text-right>
+                 <ion-row>
+                     <ion-col text-right no-padding><ion-label style="font-size:14px"><b>Total Cashout</b></ion-label></ion-col>
+                 </ion-row>
+                 <ion-row>
+                     <ion-col text-right no-padding>
+                             <ion-icon name="logo-bitcoin" color="warning" mode="ios"></ion-icon>
+                             <ion-note style="font-size:16px" color="dark">100,000</ion-note>
+                     </ion-col>
+                 </ion-row>
+             </ion-col>
+         </ion-row>
+    <ion-slides #slides (ionSlideDidChange)="slideChanged()" mode="ios">
+        <!-- <ion-slide>
+            <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-list mode="ios">
+                        <ion-list-header mode="ios">
+                            TRANSACTION HISTORY
+                          </ion-list-header>
+                          <ion-item  *ngFor="let x of transactionList;let i=index" (click)="openTransaction(x)">
+                              <ion-avatar slot="start">
+                                     <img [src]="x.image" style="border-radius: 0;">  
+                              </ion-avatar>
+                               <ion-label >
+                                 <ion-note slot="start" color="dark" mode="ios">{{x.dateandtime}}</ion-note>
+                                 <p mode="ios">{{x.text}}</p>
+                              </ion-label>
+                         </ion-item>
+                     </ion-list>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-list  mode="ios">
+                        <ion-list-header mode="ios">
+                            GIFT HISTORY
+                          </ion-list-header>
+                          <ion-item  *ngFor="let g of giftList;let i=index" (click)="openGift(g)">
+                              <ion-avatar slot="start">
+                                     <img [src]="g.image" style="border-radius: 0;">  
+                              </ion-avatar>
+                               <ion-label >
+                                 <ion-note slot="start" color="dark" mode="ios">{{g.dateandtime}}</ion-note>
+                                 <p mode="ios">{{g.text}}</p>
+                              </ion-label>
+                         </ion-item>
+                     </ion-list>
+                </ion-col>
+            </ion-row>
+            </ion-grid>
+        </ion-slide> -->
+        <ion-slide>
+            <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-list  mode="ios">
+                        <ion-list-header mode="ios" style="text-transform: capitalize;">
+                            Transaction History
+                          </ion-list-header>
+                          <ion-item  *ngFor="let x of transactionList;let i=index" (click)="openTransaction(x)">
+                              <ion-avatar slot="start">
+                                     <img [src]="x.image" style="border-radius: 0;">  
+                              </ion-avatar>
+                               <ion-label >
+                                 <ion-note slot="start" color="dark" mode="ios">{{x.dateandtime}}</ion-note>
+                                 <p mode="ios">{{x.text}}</p>
+                              </ion-label>
+                         </ion-item>
+                     </ion-list>
+                </ion-col>
+            </ion-row>
+            </ion-grid>
+        </ion-slide>
+        <ion-slide>
+            <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-list  mode="ios">
+                        <ion-list-header mode="ios">
+                            GIFT HISTORY
+                          </ion-list-header>
+                          <ion-item  *ngFor="let g of giftList;let i=index" (click)="openGift(g)">
+                              <ion-avatar slot="start">
+                                     <img [src]="g.image" style="border-radius: 0;">  
+                              </ion-avatar>
+                               <ion-label >
+                                 <ion-note slot="start" color="dark" mode="ios">{{g.dateandtime}}</ion-note>
+                                 <p mode="ios">{{g.text}}</p>
+                              </ion-label>
+                         </ion-item>
+                     </ion-list>
+                </ion-col>
+            </ion-row>
+            </ion-grid>
+        </ion-slide>
+    </ion-slides>
+</ion-content>

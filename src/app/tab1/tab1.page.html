@@ -1,0 +1,359 @@
+<ion-header translucent mode="ios">
+      <ion-toolbar mode="ios">
+          <ion-buttons slot="secondary">
+            <ion-button>
+                <img src="assets/icon/brixylogo.png" style="width: 34px;" mode="ios">
+            </ion-button>
+          </ion-buttons>
+  
+          <ion-title>Home</ion-title>
+  
+          <ion-buttons slot="primary" (click)="toAccount()">
+            <ion-button>
+              <img src="assets/icon/profilee.png" style="width: 32px;" (click)="toAccount()" mode="ios">
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-segment color="primary" mode="ios" style="padding:5px"> 
+            <ion-segment-button mode="ios" value="0" layout="icon-start" style="padding: 3px" checked>
+                <ion-label>Public</ion-label>
+                <ion-icon name="camera"></ion-icon>
+            </ion-segment-button>
+            <ion-segment-button mode="ios" value="1" layout="icon-start" style="padding: 3px">
+                <ion-label>Private</ion-label>
+                <ion-icon name="microphone"></ion-icon>
+            </ion-segment-button>
+            <ion-segment-button mode="ios" value="2" layout="icon-start" style="padding: 3px">
+                <ion-label>Ranking </ion-label>
+                <ion-icon name="trophy"></ion-icon>
+            </ion-segment-button>
+            <ion-segment-button mode="ios" value="3" layout="icon-start" style="padding: 3px">
+                <ion-label>Games</ion-label>
+                <ion-icon name="logo-game-controller-b"></ion-icon>
+            </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content mode="ios" (scroll)="onScroll($event)">
+        <ion-row>
+            <ion-col (click)="goVideo()" no-padding>
+                 <!-- <ion-card no-margin mode="ios">
+                    <img src="assets/icon/imgsample.jpg" />
+                </ion-card> -->
+                <ion-card class="myBroadcast" no-margin style="border-radius: 0% !important;">
+                        <img src="assets/icon/girgif2.gif" style="height: 200px"/>
+                        <div class="topOverlay">
+                            <div class="card-subtitle">
+                                <ion-icon name="pin"></ion-icon>
+                                <ion-label>&nbsp;Caloocan City</ion-label>
+                            </div>
+                         </div>
+                        <div class="bottomOverlay">
+                           <div class="card-title">San_Francisco69</div>
+                            <img src="assets/icon/imgviewlive.gif" style="width: 65px;right:1%;position: absolute;"/>
+                           <div class="card-subtitle">
+                             <ion-row style="font-weight: normal;">
+                               <ion-col>
+                                  <ion-icon name="medal" mode="ios"></ion-icon>
+                                  <ion-label>&nbsp;5</ion-label>
+                                  &nbsp;&nbsp;&nbsp;
+                                  <ion-icon name="eye" mode="ios"></ion-icon>
+                                  <ion-label>&nbsp;10</ion-label>
+                               </ion-col>
+                             </ion-row>
+                             <i style="font-weight:normal">Good morning!</i>
+                           </div>
+                        </div>
+                        <div class="topOverlay">
+                            <div class="card-subtitle">
+                                <ion-icon name="more" style="right:2%;position: absolute;font-size:25px"></ion-icon>
+                                <ion-icon name="pin" mode="ios"></ion-icon>
+                                <ion-label>&nbsp;Caloocan City</ion-label>
+                            </div>
+                         </div>
+                      </ion-card>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col (click)="goVideo()"  no-padding>
+                <ion-card class="myBroadcast" no-margin style="border-radius: 0% !important;">
+                        <img src="assets/icon/girgif.gif" style="height: 200px"/>
+                        <div class="topOverlay">
+                            <div class="card-subtitle">
+                                <ion-icon name="pin"></ion-icon>
+                                <ion-label>&nbsp;Caloocan City</ion-label>
+                            </div>
+                         </div>
+                        <div class="bottomOverlay">
+                           <div class="card-title">San_Francisco69</div>
+                            <img src="assets/icon/imgviewlive.gif" style="width: 65px;right:1%;position: absolute;"/>
+                           <div class="card-subtitle">
+                             <ion-row style="font-weight: normal;">
+                               <ion-col>
+                                  <ion-icon name="medal" mode="ios"></ion-icon>
+                                  <ion-label>&nbsp;5</ion-label>
+                                  &nbsp;&nbsp;&nbsp;
+                                  <ion-icon name="eye" mode="ios"></ion-icon>
+                                  <ion-label>&nbsp;10</ion-label>
+                               </ion-col>
+                             </ion-row>
+                             <i style="font-weight:normal">Good morning!</i>
+                           </div>
+                        </div>
+                        <div class="topOverlay">
+                            <div class="card-subtitle">
+                                <ion-icon name="more" style="right:2%;position: absolute;font-size:25px"></ion-icon>
+                                <ion-icon name="pin" mode="ios"></ion-icon>
+                                <ion-label>&nbsp;Caloocan City</ion-label>
+                            </div>
+                         </div>
+                      </ion-card>
+            </ion-col>
+            <ion-col (click)="goVideo()"  no-padding>
+                    <ion-card class="myBroadcast" no-margin style="border-radius: 0% !important;">
+                            <img src="assets/icon/girgif3.gif" style="height: 200px"/>
+                            <div class="topOverlay">
+                                <div class="card-subtitle">
+                                    <ion-icon name="pin"></ion-icon>
+                                    <ion-label>&nbsp;Caloocan City</ion-label>
+                                </div>
+                             </div>
+                            <div class="bottomOverlay">
+                               <div class="card-title">San_Francisco69</div>
+                                <img src="assets/icon/imgviewlive.gif" style="width: 65px;right:1%;position: absolute;"/>
+                               <div class="card-subtitle">
+                                 <ion-row style="font-weight: normal;">
+                                   <ion-col>
+                                      <ion-icon name="medal" mode="ios"></ion-icon>
+                                      <ion-label>&nbsp;5</ion-label>
+                                      &nbsp;&nbsp;&nbsp;
+                                      <ion-icon name="eye" mode="ios"></ion-icon>
+                                      <ion-label>&nbsp;10</ion-label>
+                                   </ion-col>
+                                 </ion-row>
+                                 <i style="font-weight:normal">Good morning!</i>
+                               </div>
+                            </div>
+                            <div class="topOverlay">
+                                <div class="card-subtitle">
+                                    <ion-icon name="more" style="right:2%;position: absolute;font-size:25px"></ion-icon>
+                                    <ion-icon name="pin" mode="ios"></ion-icon>
+                                    <ion-label>&nbsp;Caloocan City</ion-label>
+                                </div>
+                             </div>
+                          </ion-card>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col (click)="goVideo()" no-padding>
+                <ion-card class="myBroadcast" no-margin style="border-radius: 0% !important;">
+                    <img src="assets/icon/girgif2.gif" style="height: 200px"/>
+                    <div class="topOverlay">
+                        <div class="card-subtitle">
+                            <ion-icon name="pin"></ion-icon>
+                            <ion-label>&nbsp;Caloocan City</ion-label>
+                        </div>
+                     </div>
+                    <div class="bottomOverlay">
+                       <div class="card-title">San_Francisco69</div>
+                        <img src="assets/icon/imgviewlive.gif" style="width: 65px;right:1%;position: absolute;"/>
+                       <div class="card-subtitle">
+                         <ion-row style="font-weight: normal;">
+                           <ion-col>
+                              <ion-icon name="medal" mode="ios"></ion-icon>
+                              <ion-label>&nbsp;5</ion-label>
+                              &nbsp;&nbsp;&nbsp;
+                              <ion-icon name="eye" mode="ios"></ion-icon>
+                              <ion-label>&nbsp;10</ion-label>
+                           </ion-col>
+                         </ion-row>
+                         <i style="font-weight:normal">Good morning!</i>
+                       </div>
+                    </div>
+                    <div class="topOverlay">
+                        <div class="card-subtitle">
+                            <ion-icon name="more" style="right:2%;position: absolute;font-size:25px"></ion-icon>
+                            <ion-icon name="pin" mode="ios"></ion-icon>
+                            <ion-label>&nbsp;Caloocan City</ion-label>
+                        </div>
+                     </div>
+                  </ion-card>
+            </ion-col>
+            <ion-col (click)="goVideo()" no-padding>
+                <ion-card class="myBroadcast" no-margin style="border-radius: 0% !important;">
+                    <img src="assets/icon/girgif3.gif" style="height: 200px"/>
+                    <div class="topOverlay">
+                        <div class="card-subtitle">
+                            <ion-icon name="pin"></ion-icon>
+                            <ion-label>&nbsp;Caloocan City</ion-label>
+                        </div>
+                     </div>
+                    <div class="bottomOverlay">
+                       <div class="card-title">San_Francisco69</div>
+                        <img src="assets/icon/imgviewlive.gif" style="width: 65px;right:1%;position: absolute;"/>
+                       <div class="card-subtitle">
+                         <ion-row style="font-weight: normal;">
+                           <ion-col>
+                              <ion-icon name="medal" mode="ios"></ion-icon>
+                              <ion-label>&nbsp;5</ion-label>
+                              &nbsp;&nbsp;&nbsp;
+                              <ion-icon name="eye" mode="ios"></ion-icon>
+                              <ion-label>&nbsp;10</ion-label>
+                           </ion-col>
+                         </ion-row>
+                         <i style="font-weight:normal">Good morning!</i>
+                       </div>
+                    </div>
+                    <div class="topOverlay">
+                        <div class="card-subtitle">
+                            <ion-icon name="more" style="right:2%;position: absolute;font-size:25px"></ion-icon>
+                            <ion-icon name="pin" mode="ios"></ion-icon>
+                            <ion-label>&nbsp;Caloocan City</ion-label>
+                        </div>
+                     </div>
+                  </ion-card>
+            </ion-col>
+        </ion-row> 
+        <ion-row>
+            <ion-col (click)="goVideo()" no-padding>
+                <ion-card class="myBroadcast" no-margin style="border-radius: 0% !important;">
+                    <img src="assets/icon/girgif.gif" style="height: 200px"/>
+                    <div class="topOverlay">
+                        <div class="card-subtitle">
+                            <ion-icon name="pin"></ion-icon>
+                            <ion-label>&nbsp;Caloocan City</ion-label>
+                        </div>
+                     </div>
+                    <div class="bottomOverlay">
+                       <div class="card-title">San_Francisco69</div>
+                        <img src="assets/icon/imgviewlive.gif" style="width: 65px;right:1%;position: absolute;"/>
+                       <div class="card-subtitle">
+                         <ion-row style="font-weight: normal;">
+                           <ion-col>
+                              <ion-icon name="medal" mode="ios"></ion-icon>
+                              <ion-label>&nbsp;5</ion-label>
+                              &nbsp;&nbsp;&nbsp;
+                              <ion-icon name="eye" mode="ios"></ion-icon>
+                              <ion-label>&nbsp;10</ion-label>
+                           </ion-col>
+                         </ion-row>
+                         <i style="font-weight:normal">Good morning!</i>
+                       </div>
+                    </div>
+                    <div class="topOverlay">
+                        <div class="card-subtitle">
+                            <ion-icon name="more" style="right:2%;position: absolute;font-size:25px"></ion-icon>
+                            <ion-icon name="pin" mode="ios"></ion-icon>
+                            <ion-label>&nbsp;Caloocan City</ion-label>
+                        </div>
+                     </div>
+                  </ion-card>
+            </ion-col>
+            <ion-col (click)="goVideo()" no-padding>
+                <ion-card class="myBroadcast" no-margin style="border-radius: 0% !important;">
+                    <img src="assets/icon/girgif2.gif" style="height: 200px"/>
+                    <div class="topOverlay">
+                        <div class="card-subtitle">
+                            <ion-icon name="pin"></ion-icon>
+                            <ion-label>&nbsp;Caloocan City</ion-label>
+                        </div>
+                     </div>
+                    <div class="bottomOverlay">
+                       <div class="card-title">San_Francisco69</div>
+                        <img src="assets/icon/imgviewlive.gif" style="width: 65px;right:1%;position: absolute;"/>
+                       <div class="card-subtitle">
+                         <ion-row style="font-weight: normal;">
+                           <ion-col>
+                              <ion-icon name="medal" mode="ios"></ion-icon>
+                              <ion-label>&nbsp;5</ion-label>
+                              &nbsp;&nbsp;&nbsp;
+                              <ion-icon name="eye" mode="ios"></ion-icon>
+                              <ion-label>&nbsp;10</ion-label>
+                           </ion-col>
+                         </ion-row>
+                         <i style="font-weight:normal">Good morning!</i>
+                       </div>
+                    </div>
+                    <div class="topOverlay">
+                        <div class="card-subtitle">
+                            <ion-icon name="more" style="right:2%;position: absolute;font-size:25px"></ion-icon>
+                            <ion-icon name="pin" mode="ios"></ion-icon>
+                            <ion-label>&nbsp;Caloocan City</ion-label>
+                        </div>
+                     </div>
+                  </ion-card>
+            </ion-col>
+        </ion-row> 
+        <ion-row>
+            <ion-col (click)="goVideo()" no-padding>
+                <ion-card class="myBroadcast" no-margin style="border-radius: 0% !important;">
+                    <img src="assets/icon/girgif2.gif" style="height: 200px"/>
+                    <div class="topOverlay">
+                        <div class="card-subtitle">
+                            <ion-icon name="pin"></ion-icon>
+                            <ion-label>&nbsp;Caloocan City</ion-label>
+                        </div>
+                     </div>
+                    <div class="bottomOverlay">
+                       <div class="card-title">San_Francisco69</div>
+                        <img src="assets/icon/imgviewlive.gif" style="width: 65px;right:1%;position: absolute;"/>
+                       <div class="card-subtitle">
+                         <ion-row style="font-weight: normal;">
+                           <ion-col>
+                              <ion-icon name="medal" mode="ios"></ion-icon>
+                              <ion-label>&nbsp;5</ion-label>
+                              &nbsp;&nbsp;&nbsp;
+                              <ion-icon name="eye" mode="ios"></ion-icon>
+                              <ion-label>&nbsp;10</ion-label>
+                           </ion-col>
+                         </ion-row>
+                         <i style="font-weight:normal">Good morning!</i>
+                       </div>
+                    </div>
+                    <div class="topOverlay">
+                        <div class="card-subtitle">
+                            <ion-icon name="more" style="right:2%;position: absolute;font-size:25px"></ion-icon>
+                            <ion-icon name="pin" mode="ios"></ion-icon>
+                            <ion-label>&nbsp;Caloocan City</ion-label>
+                        </div>
+                     </div>
+                  </ion-card>
+            </ion-col>
+            <ion-col (click)="goVideo()" no-padding>
+                <ion-card class="myBroadcast" no-margin style="border-radius: 0% !important;">
+                    <img src="assets/icon/girgif2.gif" style="height: 200px"/>
+                    <div class="topOverlay">
+                        <div class="card-subtitle">
+                            <ion-icon name="pin"></ion-icon>
+                            <ion-label>&nbsp;Caloocan City</ion-label>
+                        </div>
+                     </div>
+                    <div class="bottomOverlay">
+                       <div class="card-title">San_Francisco69</div>
+                        <img src="assets/icon/imgviewlive.gif" style="width: 65px;right:1%;position: absolute;"/>
+                       <div class="card-subtitle">
+                         <ion-row style="font-weight: normal;">
+                           <ion-col>
+                              <ion-icon name="medal" mode="ios"></ion-icon>
+                              <ion-label>&nbsp;5</ion-label>
+                              &nbsp;&nbsp;&nbsp;
+                              <ion-icon name="eye" mode="ios"></ion-icon>
+                              <ion-label>&nbsp;10</ion-label>
+                           </ion-col>
+                         </ion-row>
+                         <i style="font-weight:normal">Good morning!</i>
+                       </div>
+                    </div>
+                    <div class="topOverlay">
+                        <div class="card-subtitle">
+                            <ion-icon name="more" style="right:2%;position: absolute;font-size:25px"></ion-icon>
+                            <ion-icon name="pin" mode="ios"></ion-icon>
+                            <ion-label>&nbsp;Caloocan City</ion-label>
+                        </div>
+                     </div>
+                  </ion-card>
+            </ion-col>
+        </ion-row> 
+        
+       
+</ion-content>

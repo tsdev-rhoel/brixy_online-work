@@ -1,0 +1,223 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+@import '~firebaseui/dist/firebaseui.css';
+// .my-custom-modal-css .modal-wrapper {
+//     height: 56%;
+//     width: 90%;
+//     bottom: 20%;
+//     position: absolute; 
+//     display: block;  
+//     border-radius: 13px;
+//  }
+.sendgiftmodal .modal-wrapper {
+  height: 70%;
+  width: 90%;
+  // bottom: 35%;
+  position: absolute; 
+  display: block;  
+}
+.allgiftsmodalstyle .modal-wrapper {
+  height: 80%;
+  width: 98%;
+  bottom: 1%;
+  position: absolute; 
+  display: block;  
+  background: rgba(black, 0.7) !important;
+  border-radius: 2%;
+    border: 1px solid white;
+}
+.registermodalstyle .modal-wrapper {
+  height: 80%;
+  width: 98%;
+  bottom: 1%;
+  position: absolute; 
+  display: block;  
+  background: rgba(black, 0.8) !important;
+  border-radius: 2%;
+    border: 1px solid white;
+}
+.liveprofilemodalstyle .modal-wrapper {
+  height: 60%;
+  width: 98%;
+  bottom: 1%;
+  position: absolute; 
+  display: block;  
+  background: rgba(black, 0.7) !important;
+  border-radius: 2%;
+    border: 1px solid white;
+}
+.profile-pic{
+  height: 25vw;
+    width: 25vw !important;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px grey;
+    display: inline-block !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+ .justify{
+    text-align: justify;
+}
+.img-responsive{
+    width: 100%;
+    height: auto;
+}
+.btn-default{
+    --background: #1dc1e6;
+}
+.btn-outline{
+    --border-color: #1dc1e6;
+    --color: #1dc1e6;
+}
+ .swiper-pagination-bullet {
+     background: #e3e6e8;
+     opacity: 5;
+    width: 13px;
+    height: 13px;
+   }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #1dc1e6;
+    width: 13px;
+    height: 13px;
+  }
+   ion-tab-button[aria-selected=true]{
+    --background:  #1dc1e6 !important;
+    --color-selected:white!important;
+  }
+  ion-tab-button{
+    --color:#222428;
+  }
+  .icon-background{
+    padding-top:5px;
+    background: rgba(0, 0, 0, 0.3);
+    position: relative;
+    display: inline-block;
+    margin: -1px;
+    width: 45px;
+    text-align:center; 
+    height: 45px;
+    vertical-align: middle; 
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    border-radius: 50%;
+  }
+  ion-popover{
+    ion-backdrop{
+    opacity: 0.5 !important;
+    }
+    .popover-wrapper{
+    .popover-content{
+    width:95vw;
+    max-width:500px;
+    }
+    }
+    }
+
+.choose-bg{
+    --background: none;
+    background-image: url('assets/icon/loginscreen.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.myBroadcast{
+  position:relative;
+
+}
+
+.bottomOverlay{
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    z-index: 99;
+    bottom: 0px;
+    background:linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.024),
+      rgba(0, 0, 0, 0.452)
+    );
+    color: white;
+    text-shadow: 0 2px 2px black;
+    padding: 5px;
+    font-size:15px;
+    font-weight: 700;
+}
+.topOverlay{
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  z-index: 99;
+  top: 0px;
+  background:linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.0),
+    rgba(0, 0, 0, 0.452)
+  );
+  color: white;
+  text-shadow: 0 1px 0 black;
+  padding: 5px;
+  font-size:12px;
+  font-weight: 700;
+}
+
+// temporary css
+.firebaseui-idp-facebook{
+  top: 11px;
+  left: -45px;
+  width: 50px;
+  height: 50px;
+}
+.firebaseui-idp-google{
+  top: 11px;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+}
+.firebaseui-idp-phone{
+  top: 11px;
+  left: -55px;
+  width: 50px;
+  height: 50px;
+  z-index: 9999;
+}
+.firebaseui-idp-anonymous{
+  top: -45px;
+  left: 90px;
+  width: 50px;
+  height: 50px;
+  z-index: 9999;
+  // background: #45619d !important;
+}
+
+.firebaseui-tospp-full-message{
+  color: #ffffff
+}

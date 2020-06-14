@@ -1,0 +1,126 @@
+
+  <ion-header mode="ios" style="--ion-background-color: transparent">
+    <ion-toolbar mode="ios" style="--background: transparent;">
+      <ion-buttons slot="primary" >
+        <ion-button>
+          <ion-icon slot="icon-only" name="gift" mode="ios" color="light"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+        <ion-title color="light">Send Gifts</ion-title>
+
+        <ion-buttons slot="secondary" (click)="closemodal()">
+          <ion-button>
+              <ion-icon name="close" color="light" slot="icon-only" mode="ios"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    <ion-segment style="padding: 5px" color="primary" mode="ios" (ionChange)="segmentChanged()" [(ngModel)]="segment">
+          <ion-segment-button layout="icon-start" mode="ios" value="0">
+              <ion-label>Bronze</ion-label>
+          </ion-segment-button>
+          <ion-segment-button layout="icon-start" mode="ios" value="1">
+              <ion-label>Silver</ion-label>
+          </ion-segment-button>
+          <ion-segment-button layout="icon-start" mode="ios" value="2">
+              <ion-label>Gold</ion-label>
+          </ion-segment-button>
+          <ion-segment-button layout="icon-start" mode="ios" value="3">
+              <ion-label>Popular</ion-label>
+          </ion-segment-button>
+      </ion-segment>
+    </ion-header>
+<ion-content mode="ios" no-padding style="--ion-background-color: transparent;overflow: hidden;--overflow: hidden;">
+  <ion-slides #slides (ionSlideDidChange)="slideChanged()" >
+          <ion-slide>
+              <!-- Bronze -->
+              <ion-list  mode="ios" style="width: 100%;" padding>
+                <ion-item  mode="ios" *ngFor="let w of bronzeList;let i=index" (click)="openBronze(w)">
+                     <ion-avatar  mode="ios" slot="start" style="border-radius: 0;width:20% !important;  
+                     height : 35% !important;  
+                     max-width: 20px !important;  
+                     max-height: 35px !important;">
+                            <img [src]="w.image" style="border-radius: 0;">  
+                     </ion-avatar>
+                      <ion-label  mode="ios"  no-padding color="light">
+                        <h4  mode="ios"  style="font-size: 11px;font-weight: 800;">{{w.name}}</h4>
+                      </ion-label>
+                      <ion-text color="light"  mode="ios" slot="end" style="font-size: 12px;">{{w.price}}
+                         <ion-icon name="logo-bitcoin" color="warning"></ion-icon></ion-text>
+                </ion-item>
+            </ion-list>
+          </ion-slide>
+          <ion-slide>
+              <!-- Silver -->
+              <ion-list  mode="ios" style="width: 100%;" padding>
+                  <ion-item  mode="ios" *ngFor="let x of silverList;let i=index" (click)="openSilver(x)">
+                      <ion-avatar  mode="ios" slot="start" style="border-radius: 0;width:20% !important;  
+                      height : 35% !important;  
+                      max-width: 20px !important;  
+                      max-height: 35px !important;">
+                              <img [src]="x.image" style="border-radius: 0;">  
+                      </ion-avatar>
+                        <ion-label color="light"  mode="ios"  no-padding>
+                          <h4  mode="ios"  style="font-size: 11px;font-weight: 800;">{{x.name}}</h4>
+                        </ion-label>
+                        <ion-text color="light"  mode="ios" slot="end" style="font-size: 12px;">{{x.price}}
+                          <ion-icon name="logo-bitcoin" color="warning"></ion-icon></ion-text>
+                  </ion-item>
+              </ion-list>
+          </ion-slide>
+          <ion-slide>
+              <!-- Gold -->
+              <ion-list  mode="ios" style="width: 100%;" padding>
+                  <!-- (click)="openGold(y)" -->
+                  <ion-item  mode="ios" *ngFor="let y of goldList;let i=index">
+                       <ion-avatar  mode="ios" slot="start" style="border-radius: 0;width:20% !important;  
+                       height : 35% !important;  
+                       max-width: 20px !important;  
+                       max-height: 35px !important;">
+                              <img [src]="y.image" style="border-radius: 0;">  
+                       </ion-avatar>
+                        <ion-label  mode="ios"  no-padding color="light">
+                          <h4  mode="ios"  style="font-size: 11px;font-weight: 800;">{{y.name}}</h4>
+                        </ion-label>
+                        <ion-text color="light" mode="ios" slot="end" style="font-size: 12px;">{{y.price}}
+                           <ion-icon name="logo-bitcoin" color="warning"></ion-icon></ion-text>
+                  </ion-item>
+              </ion-list>
+          </ion-slide>
+          <ion-slide>
+              <!-- Popular -->
+              <ion-list  mode="ios" style="width: 100%;" padding>
+                  <!-- (click)="openPopular(z)" -->
+                  <ion-item  mode="ios" *ngFor="let z of popularList;let i=index" >
+                       <ion-avatar  mode="ios" slot="start" style="border-radius: 0;width:20% !important;  
+                       height : 35% !important;  
+                       max-width: 20px !important;  
+                       max-height: 35px !important;">
+                              <img [src]="z.image" style="border-radius: 0;">  
+                       </ion-avatar>
+                        <ion-label  mode="ios"  no-padding color="light">
+                          <h4  mode="ios"  style="font-size: 11px;font-weight: 800;">{{z.name}}</h4>
+                        </ion-label>
+                        <ion-text color="light" mode="ios" slot="end" style="font-size: 12px;">{{z.price}}
+                           <ion-icon name="logo-bitcoin" color="warning"></ion-icon></ion-text>
+                  </ion-item>
+              </ion-list>
+          </ion-slide>
+  </ion-slides>
+</ion-content>  
+<ion-footer text-center mode="ios" style="--ion-background-color: transparent">
+      <ion-toolbar mode="ios" style="--background: transparent">
+        <ion-buttons slot="secondary">
+          <ion-button>
+            <ion-icon mode="ios" name="logo-bitcoin" color="warning" style="zoom:1.3"></ion-icon>
+            <ion-text color="light">100</ion-text>
+          </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="primary">
+          <ion-button>
+            <ion-icon mode="ios" name="star" color="warning" style="zoom:1.3"></ion-icon>
+            <ion-text color="light">10</ion-text>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-footer>

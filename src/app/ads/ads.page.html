@@ -1,0 +1,12 @@
+
+<ion-content>
+    <ion-slides [options]="slideOptsOne" pager="true" style=" --bullet-background: white; --bullet-background-active: yellow;">
+        <ion-slide *ngFor="let image of ImageArray">
+          <img src="{{image.image}}" class="img-responsive" style="display: block; width: 100%; height: 100vh; object-fit:fill;">
+         
+        </ion-slide>
+    </ion-slides>
+    <div class="my-overlay" text-center>
+        <ion-icon name="close-circle" color="light" style="zoom: 2.0;" (click)="goChoose()"></ion-icon>
+    </div>
+</ion-content>

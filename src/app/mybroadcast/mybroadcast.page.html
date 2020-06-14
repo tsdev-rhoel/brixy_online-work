@@ -1,0 +1,90 @@
+<ion-header translucent mode="ios">
+    <ion-toolbar mode="ios">
+        <ion-buttons slot="secondary" (click)="goBack()">
+          <ion-button>
+              <ion-icon name="arrow-back"  mode="ios"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+
+        <ion-title>My Broadcast</ion-title>
+
+        <ion-buttons slot="primary">
+          <ion-button>
+              <img src="assets/icon/brixylogo.png" style="width: 32px;" mode="ios">
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-segment style="padding: 5px" color="secondary" mode="ios">
+          <ion-segment-button  checked layout="icon-start" style="padding: 3px" mode="ios" value="0">
+              <ion-label>My Live Broadcast</ion-label>
+              <ion-icon name="microphone" mode="ios"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button layout="icon-start" mode="ios">
+              <ion-label>My Story Archieved</ion-label>
+              <ion-icon name="archive" mode="ios"></ion-icon>
+          </ion-segment-button>
+      </ion-segment>
+</ion-header>
+
+<ion-content mode="ios" padding style="padding-top: 0">
+    <ion-row>
+        <ion-col style="color: black" mode="ios" text-left>
+            <ion-label><b>COINS:</b>&nbsp;&nbsp;</ion-label>
+            <ion-icon name="logo-bitcoin" color="warning" mode="ios"></ion-icon>
+            <ion-text>0</ion-text>
+        </ion-col>
+        <ion-col style="color: black" mode="ios" text-right>
+            <ion-label><b>GEMS:</b>&nbsp;&nbsp;</ion-label>
+            <ion-icon name="star" color="warning" mode="ios"></ion-icon>
+            <ion-text>0</ion-text>
+        </ion-col>
+      </ion-row>
+  <ion-item><br>
+    <ion-row>
+        <ion-col style="color: black" mode="ios">
+            <ion-label>Total Hours:&nbsp;&nbsp;</ion-label>
+            <ion-icon name="hourglass" color="warning" mode="ios"></ion-icon>
+            <ion-note>00:00:00</ion-note>
+        </ion-col>
+      </ion-row>
+    </ion-item><br>
+    <ion-item mode="ios" style="font-size: 13px;">
+        <ion-label mode="ios">Start Date:</ion-label>
+        <ion-datetime mode="ios" displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item>
+    <ion-item mode="ios" style="font-size: 13px;">
+        <ion-label mode="ios">End Date:</ion-label>
+        <ion-datetime mode="ios" displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item>
+    <ion-button size="medium" color="secondary" shape="round" mode="ios" expand="full">
+      SHOW
+    </ion-button>
+    <br>
+      <ion-list-header mode="ios">
+        My Recent Sessions
+      </ion-list-header>
+    <ion-row style="border-bottom: groove;">
+        <ion-col col-4>
+        <ion-label ><b>Date</b></ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <ion-label ><b>Duration</b></ion-label>
+      </ion-col>
+        <ion-col col-4>
+        <ion-label ><b>Gems</b></ion-label>
+      </ion-col>
+        <ion-col col-4>
+        <ion-label ><b>Coins</b></ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4 colspan="4" text-center>
+        <br><br>
+          <img src="assets/icon/brixylogo.png" style="width: 32px;" mode="ios">
+          <p style="line-height: 0;">No data.</p>
+      </ion-col>
+     
+    </ion-row>
+   
+
+</ion-content>

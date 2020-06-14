@@ -1,0 +1,208 @@
+<ion-header translucent mode="ios">
+  <ion-toolbar mode="ios">
+      <ion-buttons slot="secondary">
+        <ion-button>
+            <img src="assets/icon/brixylogo.png" style="width: 34px;" mode="ios">
+        </ion-button>
+      </ion-buttons>
+
+      <ion-title>Stories</ion-title>
+
+      <ion-buttons slot="primary" (click)="toAccount()">
+        <ion-button>
+          <img src="assets/icon/profilee.png" style="width: 32px;" (click)="toAccount()" mode="ios">
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content mode="ios">
+  <ion-row>
+      <ion-col>
+          <ion-card no-margin mode="ios">
+              <img src="assets/icon/imgvideo.jpg" />
+          </ion-card>
+      </ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col>
+          <ion-card no-margin mode="ios">
+              <img src="assets/icon/imgvideo.jpg" />
+          </ion-card>
+      </ion-col>
+      <ion-col>
+          <ion-card no-margin mode="ios">
+              <img src="assets/icon/imgvideo.jpg" />
+          </ion-card>
+      </ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col>
+          <ion-card no-margin mode="ios">
+              <img src="assets/icon/imgvideo.jpg" />
+          </ion-card>
+      </ion-col>
+      <ion-col>
+          <ion-card no-margin mode="ios">
+              <img src="assets/icon/imgvideo.jpg" />
+          </ion-card>
+      </ion-col>
+  </ion-row> 
+  <ion-row>
+      <ion-col>
+          <ion-card no-margin mode="ios">
+              <img src="assets/icon/imgvideo.jpg" />
+          </ion-card>
+      </ion-col>
+      <ion-col>
+          <ion-card no-margin mode="ios">
+              <img src="assets/icon/imgvideo.jpg" />
+          </ion-card>
+      </ion-col>
+  </ion-row> 
+  <ion-row>
+      <ion-col>
+          <ion-card no-margin mode="ios">
+              <img src="assets/icon/imgvideo.jpg" />
+          </ion-card>
+      </ion-col>
+      <ion-col>
+          <ion-card no-margin mode="ios">
+              <img src="assets/icon/imgvideo.jpg" />
+          </ion-card>
+      </ion-col>
+  </ion-row> 
+  
+ 
+</ion-content>
+
+<!-- <ion-content mode="ios">
+  <ion-searchbar mode="ios" style="margin-top: 7px;"></ion-searchbar>
+  <ion-list mode="ios">
+      <ion-list-header mode="ios">
+        TOP RESULTS
+      </ion-list-header>
+
+      <ion-chip class="ion-margin-start" style="margin: 1%" (click)="goVideoTapped()">
+          <ion-avatar>
+              <img src="assets/icon/profilee.png">
+          </ion-avatar>
+          <ion-label>Kit Bishop</ion-label>
+        </ion-chip>
+        <ion-chip class="ion-margin-start" style="margin: 1%" (click)="goVideoTapped()">
+            <ion-avatar>
+                <img src="assets/icon/profilee.png">
+            </ion-avatar>
+            <ion-label>Lindon Sab</ion-label>
+        </ion-chip>
+        <ion-chip class="ion-margin-start" style="margin: 1%" (click)="goVideoTapped()">
+            <ion-avatar>
+                <img src="assets/icon/profilee.png">
+            </ion-avatar>
+            <ion-label>Lee Min</ion-label>
+        </ion-chip>
+        <ion-chip class="ion-margin-start" style="margin: 1%" (click)="goVideoTapped()">
+            <ion-avatar>
+                <img src="assets/icon/profilee.png">
+            </ion-avatar>
+            <ion-label>Aryan Tiu</ion-label>
+        </ion-chip>
+        <ion-chip class="ion-margin-start" style="margin: 1%" (click)="goVideoTapped()">
+            <ion-avatar>
+                <img src="assets/icon/profilee.png">
+            </ion-avatar>
+            <ion-label>Lars Eng</ion-label>
+        </ion-chip>
+        <ion-chip class="ion-margin-start" style="margin: 1%" (click)="goVideoTapped()">
+            <ion-avatar>
+                <img src="assets/icon/profilee.png">
+            </ion-avatar>
+            <ion-label>Kim Lee</ion-label>
+        </ion-chip>
+    </ion-list>
+  <ion-list>
+      <ion-list-header mode="ios">
+        ALL
+      </ion-list-header>
+
+      <ion-item (click)="goVideoTapped()">
+        <ion-avatar slot="start">
+          <img src="assets/icon/profilee.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>Finn</h2>
+          <p>Listen, I've had a pretty messed up day...</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item (click)="goVideoTapped()">
+        <ion-avatar slot="start">
+            <img src="assets/icon/profilee.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>Han</h2>
+          <p>I've got enough on my plate as it is, and I...</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item (click)="goVideoTapped()">
+        <ion-avatar slot="start">
+            <img src="assets/icon/profilee.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>Rey</h2>
+          <p>You will remove these restraints and leave...</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item (click)="goVideoTapped()">
+        <ion-avatar slot="start">
+            <img src="assets/icon/profilee.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>Luke</h2>
+          <p>I feel the good in you, the conflict...</p>
+        </ion-label>
+      </ion-item>
+      <ion-item (click)="goVideoTapped()">
+        <ion-avatar slot="start">
+            <img src="assets/icon/profilee.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>Poe</h2>
+          <p>I just upgraded my X-Wing. Next time...</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item (click)="goVideoTapped()"> 
+        <ion-avatar slot="start">
+            <img src="assets/icon/profilee.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>Ben</h2>
+          <p>These aren't the droids you're looking for...</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item (click)="goVideoTapped()">
+        <ion-avatar slot="start">
+            <img src="assets/icon/profilee.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>Leia</h2>
+          <p>I've placed information vital to the survival...</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item (click)="goVideoTapped()">
+        <ion-avatar slot="start">
+            <img src="assets/icon/profilee.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>Yoda</h2>
+          <p>Do or do not. There is no try...</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+</ion-content> -->

@@ -1,0 +1,35 @@
+<ion-header mode="ios">
+  <ion-row>
+    <ion-col size="9"  mode="ios">
+        <ion-item lines="none">
+            <ion-avatar slot="start" style="min-width: 3rem;min-height: 3rem;">
+                <img src="assets/icon/profilee.png"  mode="ios">
+              </ion-avatar>
+          <ion-label>
+            <h2>Lalisa Manuban</h2>
+            <p style="font-size: 15px;text-align: right;">
+                <ion-icon name="eye" style="font-size: 17px" mode="ios"></ion-icon>&nbsp;8k
+                    <ion-icon name="heart" style="font-size: 17px" mode="ios"></ion-icon>&nbsp;8k
+                    <ion-icon name="trophy" style="font-size: 17px" mode="ios"></ion-icon>&nbsp;26
+                   </p>
+          </ion-label>
+        </ion-item>
+    </ion-col>
+    <ion-col  mode="ios" text-right padding style="padding-top: 5%;">
+       <ion-icon name="heart" style="color: #98989d;font-size:40px;"  mode="ios"></ion-icon>  
+    </ion-col>
+  </ion-row>
+</ion-header>
+
+<ion-content mode="ios">
+  <img src="assets/icon/girl.gif" style="height: 100%;">
+  <div style="background: white;bottom: 0; position: fixed;width: 100%;height: 10%;box-shadow: 5px 2px 8px black;" padding-bottom>
+  
+      <ion-item no-lines>
+          <ion-icon slot="start" mode="ios" (click)="goTab5()" style="color: #98989d;font-size: 30px;vertical-align: middle;" name="arrow-back"></ion-icon>
+          <ion-input mode="ios" placeholder="Write message" style="border: 1xp solid black;width: 100%;"></ion-input>
+          <ion-icon slot="end" mode="ios" name="send" color="secondary" style="font-size: 40px;vertical-align: middle;" ></ion-icon>
+      </ion-item>
+      
+  </div>
+</ion-content>

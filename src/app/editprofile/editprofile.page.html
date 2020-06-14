@@ -1,0 +1,99 @@
+<ion-header translucent mode="ios">
+    <ion-toolbar mode="ios">
+        <ion-buttons slot="secondary" (click)="goBack()">
+          <ion-button>
+              <ion-icon name="arrow-back"  mode="ios"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+
+        <ion-title style="font-size: 11px;">Earn. Shine. and Be a Star.</ion-title>
+
+        <ion-buttons slot="primary">
+          <ion-button>
+              <img src="assets/icon/brixylogo.png" style="width: 32px;" mode="ios">
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+</ion-header>
+
+<ion-content padding style="text-align: center; padding-top:0; overflow-y: scroll;--overflow-y: scroll;" mode="ios">
+  <ion-button text-right size="small" mode="ios" color="light" (click)="upload_photo()"><ion-icon mode="ios" name="image"></ion-icon>
+    &nbsp;Update Profile Picture</ion-button><br>
+  <div *ngIf="!picture">
+  <img src="assets/icon/profilee.png" style="width: 25%;">
+</div>
+<div *ngIf="picture">
+  <img [src] = "complete_pic" style="width:100px;height:100px;display: block;margin: auto">
+</div>
+  <ion-list mode="ios">
+    <ion-list-header mode="ios">
+      Update Profile
+    </ion-list-header>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <ion-label position="floating" style="color: #cecece;">First Name</ion-label>
+            <ion-input type="text" mode="ios" maxlength="50" minlength="2" [(ngModel)]="inpt_fname" value="{{ fname }}"></ion-input>
+          </ion-col>
+          <ion-col  size="6">
+            <ion-label position="floating" style="color: #cecece;">Last Name</ion-label>
+            <ion-input type="text" mode="ios" maxlength="50" minlength="2" [(ngModel)]="inpt_lname" value="{{ lname }}"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-icon mode="ios" name="person" slot="start"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" style="color: #cecece;">Nickname</ion-label>
+      <ion-input type="text" mode="ios" maxlength="50" minlength="2" [(ngModel)]="inpt_nickname"  value="{{ nickname }}"></ion-input>
+      <ion-icon mode="ios" name="person" slot="start"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" style="color: #cecece;">Age</ion-label>
+      <ion-input type="number" mode="ios" maxlength="3" minlength="1" [(ngModel)]="inpt_age" value="{{ age }}"></ion-input>
+      <ion-icon mode="ios" name="person-add" slot="start"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" style="color: #cecece;">Gender</ion-label>
+      <ion-select interface="popover" mode="ios" value="{{ gender }}" [(ngModel)]="inpt_gender">
+        <ion-select-option value="Male">Male</ion-select-option>
+        <ion-select-option value="Female">Female</ion-select-option>
+        <ion-select-option value="Unspecified">Unspecified</ion-select-option>
+      </ion-select>
+      <ion-icon mode="ios" name="man" slot="start"></ion-icon>
+    </ion-item>
+    <ion-item>        
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <ion-label position="floating" style="color: #cecece;">Town/City</ion-label>
+            <ion-input type="text" mode="ios" maxlength="50" minlength="2" [(ngModel)]="inpt_city"  value="{{ city }}"></ion-input>
+          </ion-col>
+          <ion-col  size="6">
+            <ion-label position="floating" style="color: #cecece;">Zip Code</ion-label>
+            <ion-input type="number" mode="ios" maxlength="7" minlength="2" [(ngModel)]="inpt_zip_code"  value="{{ zip_code }}"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-icon mode="ios" name="pin" slot="start"></ion-icon>
+    </ion-item>       
+    <ion-item>
+      <ion-label position="floating" style="color: #cecece;">Country</ion-label>
+      <ion-input type="text" mode="ios" maxlength="50" minlength="2" [(ngModel)]="inpt_country" value="{{ country }}"></ion-input>
+      <ion-icon mode="ios" name="pin" slot="start"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" style="color: #cecece;">Email</ion-label>
+      <ion-input type="email" mode="ios" maxlength="50" minlength="7" [(ngModel)]="inpt_email" value="{{ email }}"></ion-input>
+      <ion-icon mode="ios" name="mail" slot="start"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" style="color: #cecece;">Contact Number</ion-label>
+      <ion-input type="number" mode="ios" maxlength="12" minlength="11" [(ngModel)]="inpt_mobile_num" value="{{ mobile_num }}"></ion-input>
+      <ion-icon mode="ios" name="call" slot="start"></ion-icon>
+    </ion-item>
+      <br><br>
+    <ion-button expand="block" mode="ios" (click)="save_profile()" color="secondary">SAVE</ion-button>
+  </ion-list>
+</ion-content>

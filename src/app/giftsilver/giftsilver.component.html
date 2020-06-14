@@ -1,0 +1,23 @@
+
+<ion-segment padding color="primary" mode="ios" style="padding-bottom: 0;">
+    <ion-segment-button layout="icon-start" mode="ios" value="0" checked>
+        <ion-label>Silver</ion-label>
+    </ion-segment-button>
+</ion-segment>
+<ion-content scrollable="true" mode="ios">
+        <ion-list  mode="ios">
+            <ion-item  mode="ios" *ngFor="let x of silverList;let i=index" (click)="openSilver(x)" >
+                 <ion-avatar  mode="ios" slot="start" style="border-radius: 0;width:20% !important;  
+                 height : 35% !important;  
+                 max-width: 20px !important;  
+                 max-height: 35px !important;">
+                        <img [src]="x.image" style="border-radius: 0;">  
+                 </ion-avatar>
+                  <ion-label  mode="ios" no-padding>
+                    <h4  mode="ios"  style="font-size: 11px;">{{x.name}}</h4>
+                  </ion-label>
+                  <p  mode="ios" slot="end" style="font-size: 13px;">{{x.price}}
+                     <ion-icon name="logo-bitcoin" color="warning"></ion-icon></p>
+            </ion-item>
+        </ion-list>
+</ion-content>

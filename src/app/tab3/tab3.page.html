@@ -1,0 +1,58 @@
+<ion-header translucent mode="ios">
+  <ion-toolbar mode="ios">
+      <ion-buttons slot="secondary" (click)="goTabs()">
+        <ion-button>
+            <ion-icon name="arrow-back" mode="ios"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+      <ion-buttons slot="primary">
+        <ion-button>
+            <ion-label mode="ios"><b>Tacloban City</b></ion-label>
+            <ion-icon name="pin" mode="ios" slot="start" color="dark"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content mode="ios">
+<img src="assets/icon/imgsample.jpg" style="width: 100%;height: 40%;" mode="ios">  
+<div class="ion-padding">
+  <ion-label style="font-size: 15px;">You are now logged on using:</ion-label>
+  <br><br>
+  <ion-row>
+      <ion-col text-center>
+        <ion-icon name="person" mode="ios"></ion-icon> 
+        <ion-label style="font-size: 14px;color: #5a80fb">&nbsp;&nbsp;brixyuname07</ion-label>
+      </ion-col>
+    <ion-col text-center>
+        <ion-icon name="call" mode="ios"></ion-icon> 
+        <ion-label style="font-size: 14px;color: #5a80fb">&nbsp;&nbsp;09456971235</ion-label>
+      </ion-col>
+  </ion-row> <br>
+  <form style="text-align: center;" mode="ios">
+    <ion-item>
+      <ion-label position="stacked">Enter Broadcast Topic</ion-label>
+      <ion-input placeholder="  e.g. Singer, Dancer"></ion-input>
+    </ion-item> <br>
+  </form>
+    <ion-row>
+    <ion-col text-center>
+        <ion-button mode="ios" shape="round" style="width: 100%;" color="primary" (click)="goTerms()">Proceed</ion-button>
+    </ion-col>
+    <ion-col text-center>
+        <ion-button mode="ios" shape="round" style="width: 100%;" color="light" (click)="goTabs()">Cancel</ion-button>
+    </ion-col> 
+  </ion-row>
+  <ion-item style="text-align: center;" lines="none" (click)="goTerms()">
+      <ion-checkbox mode="ios" style="font-size: 10px;" color="primary"></ion-checkbox>
+      <ion-label style="font-size: 12px;"><b> Read Terms and Condtions of Brixy Live</b></ion-label>
+  </ion-item>
+  <!-- <ion-row>
+    <ion-col text-center>
+        <ion-label style="font-size: 12px;">&nbsp;<a href="/termsconditions">Read Terms and Condtions of Brixy Live</a>&nbsp;&nbsp;<ion-checkbox color="primary"></ion-checkbox></ion-label>
+    </ion-col>
+  </ion-row> -->
+  
+     
+</div>
+</ion-content>

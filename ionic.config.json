@@ -1,0 +1,7 @@
+{
+  "name": "brixylive",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
